@@ -35,3 +35,11 @@ window.addEventListener('scroll', function() {
     }
     lastScrollTop = scrollTop;
 });
+
+window.onload = function() {
+    // Scroll to the home section
+    const homeSection = document.getElementById('home');
+    if (homeSection) {
+        homeSection.scrollIntoView({ behavior: 'smooth' });
+    }
+};
