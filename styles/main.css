@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  background-color: #1e1e2f;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  background-color: #14141f;
+  transition: top 0.3s;
+  z-index: 10;
+}
+nav a {
+  color: #6554AF;
+  text-decoration: none;
+  font-weight: 600;
+}
+nav a:hover {
+  color: #8477bf;
+}
+
+#home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+#home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(101, 84, 175, 0.2);
+  animation: pulse 5s infinite ease-in-out;
+  z-index: 0;
+}
+#home #particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+#home .intro {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 600px;
+  padding: 0 20px;
+}
+#home .intro h1 {
+  font-size: 2.5rem;
+  color: #6554AF;
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 1s ease-in-out;
+}
+#home .intro p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 1.2s ease-in-out;
+}
+#home .intro .btn {
+  display: inline-block;
+  background-color: #6554AF;
+  color: #ffffff;
+  padding: 0.5rem 3rem;
+  border-radius: 5px;
+  margin-top: 1.5rem;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  animation: fadeInUp 1.4s ease-in-out;
+  z-index: 1;
+}
+#home .intro .btn:hover {
+  background-color: #8477bf;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+}
+
+#about {
+  padding: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+#about img {
+  border-radius: 2%;
+  width: 250px;
+  margin-bottom: 1.5rem;
+}
+#about p {
+  width: 60%;
+  text-align: justify;
+  margin-bottom: 1.5rem;
+}
+#about .skills {
+  display: flex;
+  gap: 1rem;
+}
+#about .skills .skill {
+  background-color: #32324e;
+  padding: 0.5rem;
+  border-radius: 5px;
+  color: #6554AF;
+}
+#about .skills .skill:hover {
+  transform: scale(1.05);
+}
+
+#projects {
+  padding: 2rem;
+}
+#projects h2 {
+  text-align: center;
+}
+#projects .project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 2rem;
+  justify-items: center;
+}
+#projects .project-grid .project-item {
+  background: #333;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 300px;
+  width: 100%;
+  transition: transform 0.3s;
+}
+#projects .project-grid .project-item:hover {
+  transform: scale(1.05);
+}
+#projects .project-card {
+  background-color: #28283f;
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+#projects .project-card img {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#projects .project-card:hover {
+  background-color: #32324e;
+}
+
+#contact {
+  padding: 2rem;
+  text-align: center;
+}
+#contact .links {
+  margin: auto;
+  width: 40%;
+  display: flex;
+  justify-content: space-evenly;
+}
+#contact .links a {
+  display: flex; /* Enables alignment of icon and any text */
+  align-items: center; /* Centers the icon vertically */
+  color: #6554AF;
+  margin: 0.5rem 0;
+  font-size: 2rem; /* Adjusts icon size */
+  transition: color 0.3s;
+  text-decoration: none;
+}
+#contact .links a:hover {
+  color: #8477bf;
+}
+#contact .links a i {
+  margin-right: 0.5rem; /* Adds space between icon and text (if needed) */
+}/*# sourceMappingURL=main.css.map */
